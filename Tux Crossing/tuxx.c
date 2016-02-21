@@ -1,7 +1,18 @@
 /*
  * TUX CROSSING:
  * 
- * dsada
+ * Tux Crossing. A variant on the UK "Pelican" crossing for pedestrians
+ * going over roads.
+ * 
+ * There is a set of Red, Yellow (sometimes called amber) and Green
+ * traffic lights to control the traffic, and a "Red Man" and "Green Man"
+ * indicators for pedestrians, and a button for them push.
+ * Push the button and the lights cycle to red, then the Green Man comes
+ * on(often with a beeping sound), then after a short while the Green Man
+ * starts to flash, meaning to not start crossing, and the yellow traffic
+ * light flashes too - meaning that if the crossing is clear, traffic
+ * can pass... The after a few more seconds the flashing stops and it
+ * revers to Go for traffic and Stop for pedestrians.
  */
 
 #include <stdio.h>
@@ -149,13 +160,3 @@ int main (void){
 		startTraffic();
 	}
 }
-
-
-
-
-
-
-
-
-
-
