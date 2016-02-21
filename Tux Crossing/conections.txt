@@ -1,0 +1,5 @@
+Red1      => pin0 11 (wiringPi pin 0) => gpio 17
+Yellow    => pino 12 (wiringPi pin 1) => gpio 18
+Green     => pino 13 (wiringPi pin 2) => gpio 21
+Red Man   => pino 15 (wiringPi pin 3) => gpio 22
+Green Man => pino 16 (wiringPi pin 4) => gpio 23
