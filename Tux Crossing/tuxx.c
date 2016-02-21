@@ -63,8 +63,8 @@ void setup(void){
 void waitButton(void){
 	printf("Waiting for button..."); fflush(stdout);
 	
-	while(digitalRead (BUTTON) = HIGH)
-		delay(10)
+	while(digitalRead (BUTTON) == HIGH)
+		delay(10);
 	
 	printf("Got it\n");
 }
