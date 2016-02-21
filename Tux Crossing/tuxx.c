@@ -100,9 +100,55 @@ void waitButton(void){
  * 	start the cross and to drivers that they can move on if the
  * 	crossing is clear.
  */
- 
+ void graceTime(){
+	 int i;
+	 
+	 printf("Grace time..."); fflush(stdout);
+	 
+	 for(i = 0; i < 8; i++){
+		 delay(500);
+		 digitalWrite(GREEN_MAN, 0);
+		 digitalWrite(YELLOW, 0);
+		 delay(500);
+		 digitalWrite(GREEN_MAN, 1);
+		 digitalWrite(YELLOW, 1);
+	 }
+	 
+	 printf("Time up!\n");
+}
 
 
+/*
+ * startTraffic: Back to the Red Man and Green traffic light
+ */
+ void startTraffic(){
+	 printf("Starting traffic... "); fflush(stdout);
+	 
+	 digitalWrite(GREEN_MAN, 0);
+	 digitalWrite(RED_MAN, 1);
+	 delay(500);
+	 digitalWrite(YELLOW, 0);
+	 digitalWrite(GREEN, 1);
+	 
+	 printf("Going\n");
+ }
+/*
+ * MAIN PROGRAM
+ * 
+ * Call our setup routing once, then sit in a loop, waiting for
+ * the button to be pressed the executingthe sequence
+ */
+int main (void){
+	setup();
+	
+	for(;;){
+		waitButton();
+		stopTraffic();
+		walk();
+		graceTime();
+		startTraffic();
+	}
+}
 
 
 
