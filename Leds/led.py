@@ -6,5 +6,6 @@ GPIO.cleanup()
 GPIO.setwarnings(False)
 
 GPIO.setup(17, GPIO.OUT)
+
 print "Lights ON"
 GPIO.output(17, GPIO.HIGH)
